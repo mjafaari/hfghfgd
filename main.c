@@ -2,8 +2,24 @@
 #include <stdlib.h>
 #include <math.h>
 
+int pacman_score(){
+
+}
+
+int ghost_defence(){
+
+ }
+
+int ghost_offence(){
+
+}
+
+int pacman_move(){
+
+}
+
 int main() {
-    int i, j, n, m, time_min, time_sec, score, ch,lives, pacman_p[2][2], blinky_p[2][2], pinky_p[2][2], clyde_p[2][2], inky_p[2][2], pacman_d, blinky_d, pinky_d, clyde_d, inky_d, blinky_type, pinky_type, clyde_type, inky_type;
+    int i, j, n, m, time_min, time_sec, score, ch,lives, pacman_p[2][2], blinky_p[2][2], pinky_p[2][2], clyde_p[2][2], inky_p[2][2], pacman_d, blinky_d, pinky_d, clyde_d, inky_d, blinky_type, pinky_type, clyde_type, inky_type, n_eatables;
     scanf("%d %d", &n, &m);
     int table[n][m];
     for(j = 1; j <= n; j++)
@@ -26,5 +42,9 @@ int main() {
     scanf("pinky: %d %d (%d,%d) (%d,%d)", &pinky_d, &pinky_type, &pinky_p[0][0], &pinky_p[0][1], &pinky_p[1][0], &pinky_p[1][1]);
     scanf("clyde: %d %d (%d,%d) (%d,%d)", &clyde_d, &clyde_type, &clyde_p[0][0], &clyde_p[0][1], &clyde_p[1][0], &clyde_p[1][1]);
     scanf("inky: %d %d (%d,%d) (%d,%d)", &inky_d, &inky_type, &inky_p[0][0], &inky_p[0][1], &inky_p[1][0], &inky_p[1][1]);
+    pacman_move();
+    pacman_score();
+    ghost_defence();
+    ghost_offence();
     return 0;
 }
