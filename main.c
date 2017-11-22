@@ -19,7 +19,7 @@ int pacman_move(){
 }
 
 int main() {
-    int i, j, n, m, time_min, time_sec, score, ch,lives, pacman_p[2][2], blinky_p[2][2], pinky_p[2][2], clyde_p[2][2], inky_p[2][2], pacman_d, blinky_d, pinky_d, clyde_d, inky_d, blinky_type, pinky_type, clyde_type, inky_type, n_eatables;
+    int i, j, n, m, time_min, time_sec, score, ch, lives, pacman_p[2][2], blinky_p[2][2], pinky_p[2][2], clyde_p[2][2], inky_p[2][2], pacman_d, blinky_d, pinky_d, clyde_d, inky_d, blinky_type, pinky_type, clyde_type, inky_type, n_eatables;
     scanf("%d %d", &n, &m);
     int table[n][m];
     for(j = 1; j <= n; j++)
@@ -46,5 +46,10 @@ int main() {
     pacman_score();
     ghost_defence();
     ghost_offence();
+    printf("(%d,%d)\n%d\n", pacman_p[1][0], pacman_p[1][1], score);
+    if(n_eatables == 0)
+        printf("Yes");
+    else
+        printf("No");
     return 0;
 }
